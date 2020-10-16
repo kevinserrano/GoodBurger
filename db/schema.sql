@@ -8,5 +8,5 @@ CREATE TABLE burgers
     AUTO_INCREMENT PRIMARY KEY,
     burgers_name VARCHAR
     (60),
-    devoured BOOLEAN NOT NULL
+    devoured BOOLEAN
   );
