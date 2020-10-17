@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/kevinserrano/GoodBurger/issues"
   },
-  "homepage": "https://github.com/kevinserrano/GoodBurger#readme"
+  "homepage": "https://github.com/kevinserrano/GoodBurger#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "inquirer": "^7.3.3",
+    "mysql": "^2.18.1"
+  }
 }
