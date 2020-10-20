@@ -1,19 +1,51 @@
-<div class="jumbotron jumbotron-fluid">
+<style>
+    .jumbotron {
+        text-align: center;
+    }
+</style>
+
+
+< <div class="jumbotron jumbotron-fluid">
 
     <div class="container">
+        <h1>WELCOME TO</h1>
         <h1 class="display-4">GOOD BURGER</h1>
         <p class="lead"></p>
     </div>
-    <ul>{{#each burgers}}
-        <li>Burger Type : {{burgers_name}}</li>
+
+    <form class="orders">
+        {{#each burgers}}
+        <p>Order # {{this.id}}) Burger Type : {{this.burgers_name}}</p>
+        <button data-planid="{{this.id}}" class="delplan">Devoure!</button>
         {{/each}}
-    </ul>
+
+    </form>
+
     <panel>
         <form action="/" method="POST">
-            <textarea type="text" name="burgers"></textarea>
+            <textarea type="text" name="burgers_name"></textarea>
             <br>
             <button type="submit">Submit</button>
         </form>
     </panel>
 
-</div>
+    </div>
+
+    <script type="text/javascript">
+        $(".delplan").on("click", function (event) {
+            // Get the ID from the button.
+            // This is shorthand for $(this).attr("data-planid")
+            var id = $(this).data("burgers.name");
+
+            // Send the DELETE request.
+            $.ajax("/" + id, {
+                type: "DELETE"
+            }).then(
+                function () {
+                    console.log("deleted id ", id);
+                    // Reload the page to get the updated list
+                    location.reload();
+                }
+            );
+        });
+    </script>
