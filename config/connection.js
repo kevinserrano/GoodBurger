@@ -19,7 +19,7 @@ connection.connect(function (err){
         console.error(err.stack)
         return;
     }
-console.log(connection.threaId)
+console.log(connection.threadId)
 })
 ;
 
