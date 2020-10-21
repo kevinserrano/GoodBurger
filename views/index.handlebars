@@ -7,7 +7,7 @@
         <div class="col-5 colName">Burgers Eaten</div>
     </div>
     <div class="row burgerArea">
-        <div class="col-5 newBurgers">
+        <div class="col-5 newMeal">
             {{#each burgers}}
             {{#unless devoured}}
             <div class="burgerName">{{id}}. {{burgers_name}}</div>
@@ -21,7 +21,7 @@
             {{/unless}}
             {{/each}}
         </div>
-        <div class="col-5 oldBurgers">
+        <div class="col-5 oldMeal">
             {{#each burgers}}
             {{#if devoured}}
             <div class="oldBurgerName">{{id}}. {{burgers_name}}</div>
