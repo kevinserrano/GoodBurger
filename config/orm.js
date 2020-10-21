@@ -11,7 +11,7 @@ var orm = {
     },
     insertOne: function(newMeal, cb) {
         let queryString = "INSERT INTO burgers (burgers_name) VALUES ('" + newMeal + "');";
-
+console.log(queryString)
         connection.query(queryString, function(err, res) {
             if (err) throw err;
             cb(res);
