@@ -10,7 +10,7 @@
         <div class="col-5 newBurgers">
             {{#each burgers}}
             {{#unless devoured}}
-            <div class="burgerName">{{id}}. {{burger_name}}</div>
+            <div class="burgerName">{{id}}. {{burgers_name}}</div>
             {{/unless}}
             {{/each}}
         </div>
@@ -24,7 +24,7 @@
         <div class="col-5 oldBurgers">
             {{#each burgers}}
             {{#if devoured}}
-            <div class="oldBurgerName">{{id}}. {{burger_name}}</div>
+            <div class="oldBurgerName">{{id}}. {{burgers_name}}</div>
             {{/if}}
             {{/each}}
         </div>
